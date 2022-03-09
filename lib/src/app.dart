@@ -9,22 +9,81 @@ class App extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: DecoratedBox(
-            position: DecorationPosition.background,
-            decoration: BoxDecoration(
-              color: Colors.yellow,
-              image: DecorationImage(
-                fit: BoxFit.fitWidth,
-                image: AssetImage('images/drum.png'),
+              position: DecorationPosition.background,
+              decoration: BoxDecoration(
+                color: Colors.yellow,
+                image: DecorationImage(
+                  fit: BoxFit.fitWidth,
+                  image: AssetImage('images/drum.png'),
+                ),
               ),
-            ),
-            child: Center(
-              child: Container(
-                child: Text('salam'),
-              ),
-            ),
-          ),
+              child: getAppColumn()),
         ),
       ),
     );
   }
+}
+
+Widget getAppColumn() {
+  return Column(
+    children: [
+      Expanded(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+              child: TextButton(
+                onPressed: () => print(''),
+                child: Text('hello'),
+              ),
+            ),
+            Expanded(
+              child: TextButton(
+                onPressed: () => print(''),
+                child: Text('hello'),
+              ),
+            ),
+          ],
+        ),
+      ),
+      Expanded(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+              child: TextButton(
+                onPressed: () => print(''),
+                child: Text('hello'),
+              ),
+            ),
+            Expanded(
+              child: TextButton(
+                onPressed: () => print(''),
+                child: Text('hello'),
+              ),
+            ),
+          ],
+        ),
+      ),
+      Expanded(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+              child: TextButton(
+                onPressed: () => print(''),
+                child: Text('hello'),
+              ),
+            ),
+            Expanded(
+              child: TextButton(
+                onPressed: () => print(''),
+                child: Text('hello'),
+              ),
+            ),
+          ],
+        ),
+      )
+    ],
+  );
 }
