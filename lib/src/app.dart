@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import './audioPlayer.dart';
 
@@ -33,34 +34,17 @@ Widget getAppColumn() {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
-              child: TextButton(
-                onPressed: () => playAudio('h1.wav'),
-                child: Text('hello1'),
+              child: IconButton(
+                color: Colors.redAccent,
+                onPressed: null,
+                icon: Icon(Icons.home),
               ),
             ),
             Expanded(
-              child: TextButton(
-                onPressed: () => print(''),
-                child: Text('hello'),
-              ),
-            ),
-          ],
-        ),
-      ),
-      Expanded(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Expanded(
-              child: TextButton(
-                onPressed: () => print(''),
-                child: Text('hello'),
-              ),
-            ),
-            Expanded(
-              child: TextButton(
-                onPressed: () => print(''),
-                child: Text('hello'),
+              child: IconButton(
+                color: Colors.redAccent,
+                onPressed: null,
+                icon: Icon(Icons.audiotrack),
               ),
             ),
           ],
@@ -71,15 +55,38 @@ Widget getAppColumn() {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
-              child: TextButton(
-                onPressed: () => print(''),
-                child: Text('hello'),
+              child: IconButton(
+                color: Colors.white,
+                onPressed: null,
+                icon: Icon(Icons.audiotrack),
               ),
             ),
             Expanded(
-              child: TextButton(
-                onPressed: () => print(''),
-                child: Text('hello'),
+              child: IconButton(
+                color: Colors.white,
+                onPressed: null,
+                icon: Icon(Icons.audiotrack),
+              ),
+            ),
+          ],
+        ),
+      ),
+      Expanded(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+              child: IconButton(
+                color: Colors.redAccent,
+                onPressed: null,
+                icon: Icon(Icons.audiotrack),
+              ),
+            ),
+            Expanded(
+              child: IconButton(
+                color: Colors.redAccent,
+                onPressed: null,
+                icon: Icon(Icons.audiotrack),
               ),
             ),
           ],
