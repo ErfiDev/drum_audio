@@ -1,5 +1,5 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:just_audio/just_audio.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -26,12 +26,8 @@ class App extends StatelessWidget {
   }
 }
 
-late AudioPlayer player;
-
 class Buttons extends StatelessWidget {
-  @override
   Widget build(ctx) {
-    player = AudioPlayer();
     return Column(
       children: [
         Expanded(
@@ -41,9 +37,9 @@ class Buttons extends StatelessWidget {
               Expanded(
                 child: IconButton(
                   color: Colors.redAccent,
-                  onPressed: () async {
-                    await player.setAsset('assets/c1.wav');
-                    player.play();
+                  onPressed: () {
+                    var player = AudioCache();
+                    player.play('c1.wav');
                   },
                   icon: Icon(Icons.home),
                 ),
@@ -51,7 +47,10 @@ class Buttons extends StatelessWidget {
               Expanded(
                 child: IconButton(
                   color: Colors.redAccent,
-                  onPressed: null,
+                  onPressed: () {
+                    var player = AudioCache();
+                    player.play('c2.wav');
+                  },
                   icon: Icon(Icons.audiotrack),
                 ),
               ),
@@ -65,14 +64,20 @@ class Buttons extends StatelessWidget {
               Expanded(
                 child: IconButton(
                   color: Colors.white,
-                  onPressed: null,
+                  onPressed: () {
+                    var player = AudioCache();
+                    player.play('h1.wav');
+                  },
                   icon: Icon(Icons.audiotrack),
                 ),
               ),
               Expanded(
                 child: IconButton(
                   color: Colors.white,
-                  onPressed: null,
+                  onPressed: () {
+                    var player = AudioCache();
+                    player.play('h2.wav');
+                  },
                   icon: Icon(Icons.audiotrack),
                 ),
               ),
@@ -86,14 +91,20 @@ class Buttons extends StatelessWidget {
               Expanded(
                 child: IconButton(
                   color: Colors.redAccent,
-                  onPressed: null,
+                  onPressed: () {
+                    var player = AudioCache();
+                    player.play('k1.wav');
+                  },
                   icon: Icon(Icons.audiotrack),
                 ),
               ),
               Expanded(
                 child: IconButton(
                   color: Colors.redAccent,
-                  onPressed: null,
+                  onPressed: () {
+                    var player = AudioCache();
+                    player.play('k2.wav');
+                  },
                   icon: Icon(Icons.audiotrack),
                 ),
               ),
